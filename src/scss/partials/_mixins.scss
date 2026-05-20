@@ -1,17 +1,16 @@
-@import 'params.scss';
+@import "params.scss";
 
 @mixin container {
   width: 100%;
-  max-width: 1530px;
+  max-width: 1536px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 18px;
 }
-
 
 @mixin clear {
   padding: 0;
   margin: 0;
-  
+
   list-style: none;
 }
 
@@ -20,51 +19,31 @@
   list-style: none;
 }
 
-
 @mixin xlarge-screen() {
-  @media only screen and (max-width: 1500px) {
+  @media only screen and (max-width: 1536px) {
     @content;
   }
 }
 @mixin large-screen() {
-  @media only screen and (max-width: 1450px) {
+  @media only screen and (max-width: 1280px) {
     @content;
   }
 }
 
 @mixin medium-screen() {
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 855px) {
     @content;
   }
 }
 
-
 @mixin small-screen() {
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 768px) {
     @content;
   }
 }
 
 @mixin extrasmall-screen() {
-  @media only screen and (max-width: 410px) {
+  @media only screen and (max-width: 402px) {
     @content;
-  }
-}
-
-
-@mixin dropdown($icon: '../img/ChevronDown.svg'){
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  padding-right: 13px;
-  &:after {
-    content: url($icon);
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 5px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
   }
 }
