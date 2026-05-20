@@ -1,0 +1,223 @@
+/******/ (() => { // webpackBootstrap
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
+(() => {
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+function initFE() {
+  initTelMask();
+  //lazyLoadSrc("iframe");
+
+  //hideAnotherModal();
+  //statsAnimate(".stats", ".stats__number span");
+  //initToggleClick();
+
+  //initLightbox();
+  //fixElement(topDesktop, topMobile, elementId, className);
+}
+
+function lazyLoadSrc(selector) {
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      const source = entry.target;
+      if (entry.intersectionRatio > 0) {
+        if (!source.getAttribute("src")) {
+          source.setAttribute("src", source.dataset.src);
+          observer.unobserve(source);
+        }
+      }
+    });
+  };
+  const target = document.querySelectorAll(selector);
+  const options = {
+    threshold: 0.4,
+  };
+  let obs = new IntersectionObserver(callback, options);
+  target.forEach((item) => {
+    obs.observe(item);
+  });
+}
+
+$(document).ready(function () {
+  function hideAnotherModal() {
+    $(".modal").on("show.bs.modal", function () {
+      $(".modal.in").not($(this)).modal("hide");
+    });
+  }
+
+  function statsAnimate(wrapper, number) {
+    const something = (function () {
+      let executed = false;
+      return function () {
+        if (!executed) {
+          executed = true;
+          $(number).each(function () {
+            $(this)
+              .prop("Counter", 0)
+              .animate(
+                {
+                  Counter: $(this).text(),
+                },
+                {
+                  duration: 2000,
+                  easing: "swing",
+                  step: function (now) {
+                    $(this).text(Math.ceil(now));
+                  },
+                },
+              );
+          });
+        }
+      };
+    })();
+
+    $(window).scroll(function () {
+      if ($(wrapper).length) {
+        const top_of_element = $(wrapper).offset().top;
+        const bottom_of_element =
+          $(wrapper).offset().top + $(wrapper).outerHeight();
+        const bottom_of_screen =
+          $(window).scrollTop() + $(window).innerHeight();
+        const top_of_screen = $(window).scrollTop();
+
+        if (
+          bottom_of_screen > top_of_element &&
+          top_of_screen < bottom_of_element
+        ) {
+          something();
+        }
+      }
+    });
+  }
+
+  function initToggleClick() {
+    $("[data-toggleclick]").on("click", function (e) {
+      $(this).toggleClass("active");
+      $(this).closest("[data-toggleitem]").addClass("active");
+      e.preventDefault();
+      let dropdown = $(this).data("toggleclick");
+      $("[data-toggle].active")
+        .not($(`[data-toggle=${dropdown}]`))
+        .removeClass("active");
+      $("[data-toggleclick].active")
+        .not($(`[data-toggleclick=${dropdown}]`))
+        .removeClass("active");
+      $("[data-toggleitem].active")
+        .not($(`[data-toggleitem=${dropdown}]`))
+        .removeClass("active");
+      $(`[data-toggle=${dropdown}]`).toggleClass("active");
+      $(`[data-toggleactive=${dropdown}]`).toggleClass("active");
+    });
+  }
+
+  function initTelMask() {
+    if ($("input[type=tel]").length > 0) {
+      $("input[type=tel]").mask("7 (999) 999-99-99");
+    }
+  }
+
+  function initLightbox() {
+    lightbox.option({
+      resizeDuration: 0,
+    });
+  }
+});
+
+function fixElement(topDesktop, topMobile, elementId, className) {
+  if (document.getElementById(elementId)) {
+    if (window.innerWidth >= 1023) {
+      if (topDesktop === 0) {
+        document.getElementById(elementId).classList.add(className);
+      } else {
+        if (topDesktop) {
+          window.addEventListener("scroll", (event) => {
+            scroll = window.scrollY;
+            if (scroll >= topDesktop) {
+              document.getElementById(elementId).classList.add(className);
+            } else {
+              document.getElementById(elementId).classList.remove(className);
+            }
+          });
+        }
+      }
+    } else {
+      if (topMobile === 0) {
+        document.getElementById(elementId).classList.add(className);
+      } else {
+        if (topMobile) {
+          window.addEventListener("scroll", (event) => {
+            scroll = window.scrollY;
+            if (scroll >= topMobile) {
+              document.getElementById(elementId).classList.add(className);
+            } else {
+              document.getElementById(elementId).classList.remove(className);
+            }
+          });
+        }
+      }
+    }
+  }
+}
+
+function closeByClickOutside(element, button, fn = () => {}) {
+  $(document).click(function (event) {
+    if (!$(event.target).closest(`${element},${button}`).length) {
+      $(button).removeClass("active");
+      $(element).removeClass("active");
+
+      if (fn) {
+        fn();
+      }
+    }
+  });
+
+  $(document).keyup(function (e) {
+    if (e.key === "Escape") {
+      // escape key maps to keycode `27`
+      $(button).removeClass("active");
+      $(element).removeClass("active");
+
+      if (fn) {
+        fn();
+      }
+    }
+  });
+}
+
+window.addEventListener("load", () => {
+  initFE();
+});
+
+})();
+
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
+(() => {
+"use strict";
+/*!*****************************!*\
+  !*** ./src/scss/index.scss ***!
+  \*****************************/
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+})();
+
+/******/ })()
+;
+//# sourceMappingURL=bundle.js.map
