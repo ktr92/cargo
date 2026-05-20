@@ -2,8 +2,18 @@
   <%= _.template(require('../includes/head.html').default)(data) %>
     <%= _.template(require('../includes/header.html').default)(data) %>
       <main>
-        <div class="container">
-
-        </div>
+        <div class="heroblock">
+          <div class="container">
+            <div class="heroblock__image">
+              <img src="img/hero.png" alt="">
+            </div><!-- /.heroblock__image -->
+            <div class="heroblock__content">
+              <div class="heroblock__title">Official Global Exporter</div>
+              <div class="heroblock__link">
+                <a href="#form" aria-label="anchor">Become a partner</a>
+              </div>
+            </div><!-- /.heroblock__content -->
+          </div><!-- /.container -->
+        </div><!-- /.heroblock -->
       </main>
       <%= _.template(require('../includes/footer.html').default)(data) %>

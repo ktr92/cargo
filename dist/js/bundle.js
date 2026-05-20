@@ -30,7 +30,31 @@ function initFE() {
   //initToggleClick();
 
   //initLightbox();
-  //fixElement(topDesktop, topMobile, elementId, className);
+  fixElement(0, 0, "header");
+}
+function checkCookies() {
+  function getCookie(name) {
+    let matches = document.cookie.match(
+      new RegExp(
+        "(?:^|; )" +
+          name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") +
+          "=([^;]*)",
+      ),
+    );
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("cookiesAccepted")) {
+      document.querySelector(".cookies").style.display = "none";
+    } else {
+      document.querySelector(".cookies").style.display = "block";
+    }
+    document.querySelector(".js-accept-cookie").onclick = function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.querySelector(".cookies").style.display = "none";
+    };
+  });
 }
 
 function lazyLoadSrc(selector) {
