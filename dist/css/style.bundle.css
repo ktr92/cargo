@@ -292,6 +292,10 @@ img {
   color: #fff;
 }
 
+.heroblock__link {
+  margin-right: 60px;
+}
+
 .heroblock__link a {
   display: block;
   padding-right: 70px;
@@ -345,17 +349,6 @@ img {
   padding: 0 15px;
 }
 
-.cookies__text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 12px;
-  display: flex;
-  align-items: center;
-  /* #0A0033 */
-  color: #7b7794;
-}
-
 .cookies__button .btn_main.btn_main_default.btn_main_white {
   font-style: normal;
   font-weight: normal;
@@ -374,18 +367,6 @@ img {
   color: #2a4c80;
 }
 
-.cookies_v5 .cookies__text {
-  font-weight: 300;
-  font-size: 12px;
-  color: #000;
-  display: block;
-  line-height: 120%;
-}
-
-.cookies_v5 .cookies__text a {
-  color: #344ccc;
-}
-
 .cookies_v5 .cookies__wrapper {
   padding: 20px;
   position: relative;
@@ -393,14 +374,13 @@ img {
 }
 
 .cookies_v5 {
-  bottom: 30px;
+  bottom: 0;
+  background: #000;
 }
 
 .cookies_v5 .cookies__wrapper {
-  max-width: 1120px;
+  max-width: 1080px;
   margin: auto;
-  box-shadow: 0 2px 9px 3px rgba(115, 100, 178, 0.3);
-  border-radius: 16px;
 }
 
 .cookies_v5 .cookies__button .btn_main {
@@ -410,20 +390,66 @@ img {
   font-size: 16px;
 }
 
-.btn-cookie {
-  color: #000;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  background-color: #0db1f4;
+.cookies__text {
+  font-weight: 100;
+  font-size: 11px;
+  letter-spacing: -0.02em;
   color: #fff;
-  padding: 15px;
+  max-width: 732px;
+}
+
+.cookies__text a {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: 400;
+}
+
+.cookies__text a:hover {
+  text-decoration: none;
+}
+
+.btn-cookie {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #fff;
+  padding: 9px 11px;
   background-image: none;
-  border-radius: 5px;
   text-shadow: none;
   box-shadow: none;
   border: none;
-  display: block;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  line-height: 1;
+}
+
+.cookies__button {
+  margin-bottom: 13px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+}
+
+.cookies__button:last-child {
+  margin-bottom: 0;
+}
+
+.btn-cookie-text {
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
 }
 
 @media (max-width: 999px) {

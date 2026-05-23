@@ -1,27 +1,29 @@
-function initFE() {
-  initTelMask();
-  //lazyLoadSrc("iframe");
+window.addEventListener("load", () => {
+  function initFE() {
+    initTelMask();
+    checkCookies();
+    //lazyLoadSrc("iframe");
 
-  //hideAnotherModal();
-  //statsAnimate(".stats", ".stats__number span");
-  //initToggleClick();
+    //hideAnotherModal();
+    //statsAnimate(".stats", ".stats__number span");
+    //initToggleClick();
 
-  //initLightbox();
-  fixElement(0, 0, "header");
-}
-function checkCookies() {
-  function getCookie(name) {
-    let matches = document.cookie.match(
-      new RegExp(
-        "(?:^|; )" +
-          name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") +
-          "=([^;]*)",
-      ),
-    );
-    return matches ? decodeURIComponent(matches[1]) : undefined;
+    //initLightbox();
+    fixElement(0, 0, "header");
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
+  function checkCookies() {
+    function getCookie(name) {
+      let matches = document.cookie.match(
+        new RegExp(
+          "(?:^|; )" +
+            name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") +
+            "=([^;]*)",
+        ),
+      );
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
     if (localStorage.getItem("cookiesAccepted")) {
       document.querySelector(".cookies").style.display = "none";
     } else {
@@ -31,38 +33,29 @@ function checkCookies() {
       localStorage.setItem("cookiesAccepted", "true");
       document.querySelector(".cookies").style.display = "none";
     };
-  });
-}
-
-function lazyLoadSrc(selector) {
-  const callback = (entries, observer) => {
-    entries.forEach((entry) => {
-      const source = entry.target;
-      if (entry.intersectionRatio > 0) {
-        if (!source.getAttribute("src")) {
-          source.setAttribute("src", source.dataset.src);
-          observer.unobserve(source);
-        }
-      }
-    });
-  };
-  const target = document.querySelectorAll(selector);
-  const options = {
-    threshold: 0.4,
-  };
-  let obs = new IntersectionObserver(callback, options);
-  target.forEach((item) => {
-    obs.observe(item);
-  });
-}
-
-$(document).ready(function () {
-  function hideAnotherModal() {
-    $(".modal").on("show.bs.modal", function () {
-      $(".modal.in").not($(this)).modal("hide");
-    });
   }
 
+  function lazyLoadSrc(selector) {
+    const callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        const source = entry.target;
+        if (entry.intersectionRatio > 0) {
+          if (!source.getAttribute("src")) {
+            source.setAttribute("src", source.dataset.src);
+            observer.unobserve(source);
+          }
+        }
+      });
+    };
+    const target = document.querySelectorAll(selector);
+    const options = {
+      threshold: 0.4,
+    };
+    let obs = new IntersectionObserver(callback, options);
+    target.forEach((item) => {
+      obs.observe(item);
+    });
+  }
   function statsAnimate(wrapper, number) {
     const something = (function () {
       let executed = false;
@@ -139,69 +132,72 @@ $(document).ready(function () {
       resizeDuration: 0,
     });
   }
-});
+  function hideAnotherModal() {
+    $(".modal").on("show.bs.modal", function () {
+      $(".modal.in").not($(this)).modal("hide");
+    });
+  }
 
-function fixElement(topDesktop, topMobile, elementId, className) {
-  if (document.getElementById(elementId)) {
-    if (window.innerWidth >= 1023) {
-      if (topDesktop === 0) {
-        document.getElementById(elementId).classList.add(className);
-      } else {
-        if (topDesktop) {
-          window.addEventListener("scroll", (event) => {
-            scroll = window.scrollY;
-            if (scroll >= topDesktop) {
-              document.getElementById(elementId).classList.add(className);
-            } else {
-              document.getElementById(elementId).classList.remove(className);
-            }
-          });
+  function fixElement(topDesktop, topMobile, elementId, className) {
+    if (document.getElementById(elementId)) {
+      if (window.innerWidth >= 1023) {
+        if (topDesktop === 0) {
+          document.getElementById(elementId).classList.add(className);
+        } else {
+          if (topDesktop) {
+            window.addEventListener("scroll", (event) => {
+              scroll = window.scrollY;
+              if (scroll >= topDesktop) {
+                document.getElementById(elementId).classList.add(className);
+              } else {
+                document.getElementById(elementId).classList.remove(className);
+              }
+            });
+          }
         }
-      }
-    } else {
-      if (topMobile === 0) {
-        document.getElementById(elementId).classList.add(className);
       } else {
-        if (topMobile) {
-          window.addEventListener("scroll", (event) => {
-            scroll = window.scrollY;
-            if (scroll >= topMobile) {
-              document.getElementById(elementId).classList.add(className);
-            } else {
-              document.getElementById(elementId).classList.remove(className);
-            }
-          });
+        if (topMobile === 0) {
+          document.getElementById(elementId).classList.add(className);
+        } else {
+          if (topMobile) {
+            window.addEventListener("scroll", (event) => {
+              scroll = window.scrollY;
+              if (scroll >= topMobile) {
+                document.getElementById(elementId).classList.add(className);
+              } else {
+                document.getElementById(elementId).classList.remove(className);
+              }
+            });
+          }
         }
       }
     }
   }
-}
 
-function closeByClickOutside(element, button, fn = () => {}) {
-  $(document).click(function (event) {
-    if (!$(event.target).closest(`${element},${button}`).length) {
-      $(button).removeClass("active");
-      $(element).removeClass("active");
+  function closeByClickOutside(element, button, fn = () => {}) {
+    $(document).click(function (event) {
+      if (!$(event.target).closest(`${element},${button}`).length) {
+        $(button).removeClass("active");
+        $(element).removeClass("active");
 
-      if (fn) {
-        fn();
+        if (fn) {
+          fn();
+        }
       }
-    }
-  });
+    });
 
-  $(document).keyup(function (e) {
-    if (e.key === "Escape") {
-      // escape key maps to keycode `27`
-      $(button).removeClass("active");
-      $(element).removeClass("active");
+    $(document).keyup(function (e) {
+      if (e.key === "Escape") {
+        // escape key maps to keycode `27`
+        $(button).removeClass("active");
+        $(element).removeClass("active");
 
-      if (fn) {
-        fn();
+        if (fn) {
+          fn();
+        }
       }
-    }
-  });
-}
+    });
+  }
 
-window.addEventListener("load", () => {
   initFE();
 });
