@@ -760,10 +760,14 @@ svg .shadow-path1:hover  {
   align-items: flex-end;
 }
 
-.partnersection__left,
+.partnersection__left {
+  width: 100%;
+  max-width: calc(50% - 62px);
+}
+
 .partnersection__right {
   width: 100%;
-  max-width: calc(50% - 30px);
+  max-width: 50%;
 }
 
 .partnersection__right {
@@ -896,6 +900,216 @@ h3 {
   font-size: 47px;
   font-family: var(--second-family);
   margin-bottom: 10px;
+}
+
+.partnersection__text_xl {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 47px;
+  color: #000;
+  min-width: 435px;
+  max-width: 435px;
+}
+.partnersection__text_xl p,
+.partnersection__text_xl li {
+  margin-top: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  text-align: justify;
+  color: #000;
+  line-height: 150%;
+}
+
+.partnersection__text {
+  margin-right: 22px;
+}
+.partnersection__text p,
+.partnersection__text li {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  text-align: justify;
+  color: #000;
+  line-height: 150%;
+}
+.partnersection__text ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.partnersection__content {
+  margin: 32px 0;
+  display: flex;
+  gap: 35px;
+}
+
+.partnersection__textimg {
+  display: flex;
+  gap: 21px;
+}
+
+.partnersection__textlg {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 54px;
+  letter-spacing: -0.01em;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.partnersection__textlist ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: 469px;
+}
+.partnersection__textlist li {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: -0.01em;
+  color: #000;
+  line-height: 150%;
+}
+
+.partnersection__textimg__img {
+  max-width: 330px;
+}
+
+.partnersection__textimg {
+  margin-bottom: 40px;
+}
+
+.partnersection__titleright {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 47px;
+  letter-spacing: -0.01em;
+  text-align: right;
+  color: #000;
+  margin-bottom: 14px;
+}
+
+.partnersection__textcolumns {
+  display: flex;
+  gap: 34px;
+}
+.partnersection__textcolumns .textabout li {
+  padding-left: 0;
+  background: none;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.partnersection__textcolumns_left {
+  width: calc(50% - 17px);
+}
+
+.partnersection__textcolumns_right {
+  width: calc(50% - 17px);
+}
+
+.salessection__items {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.salessection__item {
+  max-width: calc(33.3333333333% - 20px);
+  width: 100%;
+}
+
+.salessection__item:last-child {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.salessection__wrapper {
+  background: #000;
+  color: #fff;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 14px 10px 14px;
+}
+
+.salessection__title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 21px;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin-bottom: 42px;
+}
+
+.salessection__value {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.companysection__table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+.companysection__table td {
+  vertical-align: sub;
+  width: 50%;
+  padding: 1px 24px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.companysection__table td:last-child {
+  text-align: center;
+  padding: 1px 8px;
+}
+
+.activitiessection__container {
+  padding: 28px 0 8px 0;
+  background-color: #000;
+}
+
+.activitiessection__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activitiessection__value {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 42px;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.activitiessection__text {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: #fff;
+  line-height: 150%;
 }
 
 @media (max-width: 999px) {
