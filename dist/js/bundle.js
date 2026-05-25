@@ -151,7 +151,7 @@ window.addEventListener("load", () => {
 
   function initTelMask() {
     if ($("input[type=tel]").length > 0) {
-      $("input[type=tel]").mask("7 (999) 999-99-99");
+      $("input[type=tel]").mask("+7 (999) 999-99-99");
     }
   }
 

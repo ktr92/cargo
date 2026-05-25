@@ -342,7 +342,7 @@
               </div><!-- /.partnersection__textimg__img -->
             </div><!-- /.partnersection__textimg -->
 
-            <div class="partnersection__titleright">Fulfillment Solutions by  in Poland, Turkey, and
+            <div class="partnersection__titleright">Fulfillment Solutions by in Poland, Turkey, and
               China</div>
             <div class="partnersection__textcolumns">
               <div class="partnersection__textcolumns_left">
@@ -362,7 +362,7 @@
                     we ensure flexible routing, reduced delivery times,
                     and lower operational costs.</p>
 
-                  <p>Fulfillment by  means transparent processes, end-to-end control, and solutions
+                  <p>Fulfillment by means transparent processes, end-to-end control, and solutions
                     tailored
                     to your business needs, regardless of volume or geography.</p>
                 </div><!-- /.partnersection__text -->
@@ -441,13 +441,13 @@
                     <td>VAT no</td>
                     <td>PL 7831884241</td>
                   </tr>
-                  
+
                 </tbody>
               </table>
             </div><!-- /.companysection__table -->
           </div>
         </section>
-         <section class="section activitiessection" id="activitiessection">
+        <section class="section activitiessection" id="activitiessection">
           <div class="container">
             <h2>Official activities of the company </h2>
           </div>
@@ -464,11 +464,67 @@
                 </div><!-- /.activitiessection__item -->
                 <div class="activitiessection__item">
                   <div class="activitiessection__value">46 191</div>
-                  <div class="activitiessection__text">Activities of agents <br>involved in non-<br>specialised wholesale</div>
+                  <div class="activitiessection__text">Activities of agents <br>involved in non-<br>specialised
+                    wholesale</div>
                 </div><!-- /.activitiessection__item -->
               </div><!-- /.activitiessection__items -->
             </div><!-- /.container -->
           </div><!-- /.activitiessection__container -->
-         </section>
+        </section>
+        <section class="section formsection" id="formsection">
+          <div class="container">
+            <h2>Write to us</h2>
+            <div class="formsection__wrapper">
+              <div class="formsection__aside">
+                <div class="formsection__text">If you have any questions or suggestions, we would love to discuss them
+                  with you. Please leave your contact information and we will get back to you!</div>
+                <div class="formsection__contactblock">
+                  <div class="formsection__contacttitle"></div>
+                  <div class="formsection__contactwrapper">
+                    <div class="formsection__contact"><a href="tel:+372660012" class="phone">+ 372 660 012</a></div>
+                    <div class="formsection__contact"><a href="mailto:info@mhvbuilders.ee"
+                        class="email">info@mhvbuilders.ee</a></div>
+                  </div>
+                </div><!-- /.formsection__contact -->
+              </div><!-- /.formsection__aside -->
+              <div class="formsection__form">
+                <form action="#" id="form">
+                  <fieldset id="personal-info">
+                    <div class="inputblock">
+                      <label for="full-name">Your name</label>
+                      <input type="text" id="full-name" name="full-name" autocomplete="cargotrans"
+                        placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="inputblock">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" autocomplete="cargotrans"
+                        placeholder="example@example.com" required="" pattern="^.+@\w+\.\w{2,}$">
+                    </div>
+                    <div class="inputblock">
+                      <label for="phone">Phone number</label>
+                      <input type="tel" id="phone" name="phone" autocomplete="cargotrans" required=""
+                        placeholder="Enter your phone number">
+                    </div>
+                    <div class="inputblock">
+                      <label for="comment">Comment</label>
+                      <textarea name="comment" id="comment" rows="4"></textarea><!-- /# -->
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="check-block check-block_big">
+                    <input type="checkbox" id="id_check" required="">
+                    <label for="id_check">I agree to the processing of personal data</label>
+                  </fieldset>
+
+                  <div class="inputblock">
+                    <button type="submit" id="submit-btn" class="btn">Send</button>
+                  </div>
+
+                </form>
+              </div><!-- /.formsection__form -->
+            </div><!-- /.formsection__wrapper -->
+          </div>
+        </section>
       </main>
       <%= _.template(require('../includes/footer.html').default)(data) %>

@@ -1024,7 +1024,7 @@ h3 {
 }
 
 .salessection__item {
-  max-width: calc(33.3333333333% - 20px);
+  max-width: calc(33.3333333333% - 7px);
   width: 100%;
 }
 
@@ -1110,6 +1110,207 @@ h3 {
   letter-spacing: -0.01em;
   color: #fff;
   line-height: 150%;
+  margin-bottom: 44px;
+}
+
+.formsection__wrapper {
+  display: flex;
+  gap: 72px;
+}
+
+.formsection__aside {
+  max-width: 286px;
+}
+
+.formsection__text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: justify;
+  color: #000;
+  padding-bottom: 19px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 44px;
+}
+
+.formsection__contactwrapper {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 19px 24px;
+}
+
+.formsection__contact {
+  margin-bottom: 9px;
+}
+.formsection__contact:last-child {
+  margin-bottom: 0;
+}
+
+.formsection__contact a {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #000;
+}
+
+.phone {
+  padding-left: 27px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.58927 9.10917C6.80494 11.4983 8.76353 13.4484 11.1527 14.6726L13.0099 12.8153C13.2379 12.5873 13.5756 12.5114 13.871 12.6127C14.8166 12.925 15.8381 13.0939 16.8849 13.0939C17.3492 13.0939 17.7291 13.4738 17.7291 13.9381V16.8844C17.7291 17.3487 17.3492 17.7286 16.8849 17.7286C8.9577 17.7286 2.5332 11.3041 2.5332 3.37693C2.5332 2.91261 2.9131 2.53271 3.37742 2.53271H6.33218C6.7965 2.53271 7.1764 2.91261 7.1764 3.37693C7.1764 4.4322 7.34524 5.44527 7.6576 6.39079C7.75047 6.68627 7.68293 7.01551 7.44655 7.25189L5.58927 9.10917Z' fill='black'/%3e%3c/svg%3e ");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.email {
+  padding-left: 27px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.5332 16.0393V4.22021H17.7291V16.0393H2.5332ZM10.1312 10.2277L16.8849 5.81156V5.06443L10.1312 9.28552L3.37742 5.06443V5.81156L10.1312 10.2277Z' fill='black'/%3e%3c/svg%3e ");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.btn {
+  display: block;
+  padding: 12px 41px;
+  font-family: var(--font-family);
+  background: #000;
+  font-weight: 400;
+  min-width: 160px;
+  font-size: 15px;
+  line-height: 90%;
+  text-align: center;
+  color: #fff;
+  border: none;
+}
+
+.check-block {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.check-block label {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 90%;
+  color: #000;
+}
+
+input[type=checkbox][required] {
+  display: block;
+  opacity: 0;
+  float: left;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  left: 4px;
+}
+
+.check-block label:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 0;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.check-block input[type=checkbox]:checked + label:before {
+  background-image: url(../img/checkbox_checked.png);
+  background-repeat: no-repeat;
+  background-position: left 2px top 2px;
+  background-size: 9px;
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.check-block:hover label:before {
+  border: 1px solid #aeb5d1;
+}
+
+.check-block label a {
+  font-weight: 200;
+}
+
+.check-block label a:hover {
+  border-bottom: none;
+}
+
+.formsection__form fieldset {
+  border: none;
+  padding: 0;
+}
+
+.inputblock {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.inputblock label {
+  margin-bottom: 5px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 90%;
+  display: block;
+  width: 100%;
+  color: #000;
+}
+
+.formsection__form {
+  width: 100%;
+}
+
+.inputblock input, .inputblock textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 11px 16px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 90%;
+  color: #000;
+  resize: none;
+}
+
+.footer {
+  margin: 15px 0;
+  background: #fff;
+}
+
+.footer__menu {
+  color: #000;
+  margin: 30px 0;
+}
+.footer__menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__menu li a {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 90%;
+  text-align: center;
+  color: #000;
+}
+
+.footer__copy {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #000;
+  margin: 30px 0 18px 0;
 }
 
 @media (max-width: 999px) {
