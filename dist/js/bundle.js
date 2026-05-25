@@ -33,6 +33,11 @@ window.addEventListener("load", () => {
 
     //initLightbox();
     fixElement(0, 0, "header");
+    wowInit();
+  }
+
+  function wowInit() {
+    new WOW().init();
   }
 
   function checkCookies() {
