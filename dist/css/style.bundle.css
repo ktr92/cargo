@@ -697,11 +697,11 @@ div.blackwrapper h2 {
   justify-content: flex-end;
 }
 
-.whysection__item:nth-child(2n-1) .whysection__itemwrapper {
+.whysection__col:nth-child(2n-1) .whysection__itemwrapper {
   background-color: rgba(3, 178, 255, 0.64);
 }
 
-.whysection__item:nth-child(2n) .whysection__itemwrapper {
+.whysection__col:nth-child(2n) .whysection__itemwrapper {
   background-color: rgba(255, 0, 10, 0.64);
 }
 
@@ -1330,6 +1330,12 @@ main {
   padding-top: 94px;
 }
 
+.whysection__col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 @media (max-width: 999px) {
   .btn-cookie {
     font-size: 14px;
@@ -1405,7 +1411,8 @@ main {
   .headermain__logo {
     width: 65px;
   }
-  .headermain__logo a, .headermain__logo img {
+  .headermain__logo a,
+  .headermain__logo img {
     display: block;
     line-height: 1;
   }
@@ -1539,6 +1546,196 @@ main {
     justify-content: space-between;
     gap: 31px;
     margin-top: 15px;
+  }
+  .results .container {
+    padding: 0 22px;
+  }
+  .container_desktop {
+    max-width: 100%;
+    padding: 0;
+  }
+  .container_mlg {
+    padding: 0 54px;
+  }
+  .process__item {
+    font-size: 11px;
+    margin-bottom: 20px;
+    padding: 0 54px 6px 54px;
+  }
+  .process__wrapper {
+    padding: 25px 0;
+  }
+  .whysection__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .whysection__item {
+    height: 76px;
+    width: 70vw;
+  }
+  .whysection__col {
+    gap: 7px;
+  }
+  .whysection__col:nth-child(2n) {
+    align-items: flex-end;
+    width: 100%;
+  }
+  .mapsection h2 {
+    text-align: right;
+  }
+  .partnersection__wrapper {
+    display: block;
+  }
+  .whysection__itemtitle {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .whysection__itemwrapper {
+    padding: 11px 15px;
+  }
+  .whysection__itemtext {
+    font-weight: 400;
+    font-size: 10px;
+  }
+  .partnersection__right {
+    max-width: 100%;
+  }
+  .partnersection__left {
+    max-width: 100%;
+  }
+  .bgline_black:before {
+    width: 100vw;
+  }
+  .partnersection__textcolumns_right,
+  .partnersection__textcolumns_left {
+    width: 100%;
+  }
+  .partnersection__text_xl {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .partnersection__textimg {
+    display: block;
+  }
+  .partnersection__textcolumns {
+    display: block;
+  }
+  .flag {
+    height: 18px;
+  }
+  .partnersection__text {
+    margin-right: 0;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: -0.01em;
+  }
+  .partnersection__address {
+    height: 64px;
+    gap: 21px;
+  }
+  .partnersection__image {
+    margin-top: 18px;
+  }
+  #partnersection2 h2 {
+    font-size: 37px;
+  }
+  .statblocks__value {
+    font-size: 29px;
+  }
+  .statblocks__text {
+    font-size: 14px;
+  }
+  .statblocks__value small {
+    font-size: 19px;
+  }
+  .statblocks__item:nth-child(2n-1) {
+    max-width: 106px;
+    min-width: 106px;
+  }
+  .statblocks__item:nth-child(2n) {
+    width: calc(100% - 116px);
+  }
+  .statblocks__items {
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 87%;
+    margin-bottom: 13px;
+  }
+  .textabout p,
+  .textabout li {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+  .textabout li {
+    padding-left: 24px;
+    background-size: 14px;
+  }
+  .partnersection__right .textabout {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .partnersection__content {
+    margin: 13px 0;
+    gap: 8px;
+  }
+  .partnersection__text_xl {
+    font-size: 29px;
+    min-width: unset;
+  }
+  .partnersection__text p,
+  .partnersection__text li {
+    font-size: 11px;
+    max-width: 228px;
+  }
+  .partnersection__text_xl p,
+  .partnersection__text_xl li {
+    font-size: 11px;
+    max-width: 228px;
+    margin-left: auto;
+    text-align: right;
+  }
+  .mobile_right {
+    text-align: right;
+  }
+  .onlyMobile .textabout.bgline_black {
+    /* li {
+     padding-left: 0;
+     background-image: none;
+     margin-bottom: 5px
+    } */
+  }
+  .companysection__table td {
+    font-weight: 400;
+    font-size: 10px;
+    padding: 1px 11px;
+    letter-spacing: -0.01em;
+  }
+  .companysection__table td:last-child {
+    text-align: right;
+  }
+  .salessection h2 {
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 93%;
+    text-transform: uppercase;
+    color: #000;
+  }
+  .activitiessection__value {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+  }
+  .activitiessection__text {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #fff;
   }
 }
 
