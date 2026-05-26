@@ -132,6 +132,9 @@ a {
   --second-family: "Bebas Neue";
 }
 
+/* html {
+  scroll-behavior: smooth;
+} */
 body {
   min-width: 402px;
   font-family: var(--font-family);
@@ -236,8 +239,8 @@ img {
 
 .headertop {
   padding: 26px 0 13px 0;
-  background: #fff;
-  border-bottom: 1px solid #f0f0f0;
+  /*   background: #fff;
+    border-bottom: 1px solid #f0f0f0; */
 }
 
 .topmenu__items ul {
@@ -1313,6 +1316,20 @@ input[type=checkbox][required] {
   margin: 30px 0 18px 0;
 }
 
+#header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+main {
+  padding-top: 94px;
+}
+
 @media (max-width: 999px) {
   .btn-cookie {
     font-size: 14px;
@@ -1335,6 +1352,69 @@ input[type=checkbox][required] {
     margin: auto;
   }
 }
+/* desktop small */
+/* laptop */
+@media only screen and (max-width: 1280px) {
+  .about__col {
+    max-width: calc(50% - 30px);
+  }
+}
+/* tablet */
 /* mobile */
+@media only screen and (max-width: 768px) {
+  .topmenu {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    height: calc(100vh - 80px);
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 10;
+    display: none;
+    width: 50%;
+    padding: 22px 0;
+  }
+  main {
+    padding-top: 80px;
+  }
+  .topmenu__items ul li {
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 43px;
+  }
+  .topmenu__items ul li a {
+    font-size: 22px;
+    padding: 12px 21px;
+  }
+  .topmenu.active {
+    display: block;
+  }
+  .partnersection__content {
+    flex-wrap: wrap;
+  }
+  .formsection__wrapper {
+    flex-wrap: wrap;
+  }
+  .topmenu__items ul {
+    display: block;
+  }
+  [data-toggleclick=topmenu] {
+    background: none;
+    border: none;
+  }
+  .headermain__logo {
+    width: 65px;
+  }
+  .headermain__logo a, .headermain__logo img {
+    display: block;
+    line-height: 1;
+  }
+  .headertop {
+    padding: 37px 0 10px 0;
+  }
+  .container__lg {
+    padding: 0 45px;
+  }
+}
 
 /*# sourceMappingURL=style.bundle.css.map*/

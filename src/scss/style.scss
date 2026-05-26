@@ -82,7 +82,9 @@
   --font-family: "Helvetica";
   --second-family: "Bebas Neue";
 }
-
+/* html {
+  scroll-behavior: smooth;
+} */
 body {
   min-width: 402px;
   font-family: var(--font-family);
@@ -180,8 +182,8 @@ img {
 }
 .headertop {
   padding: 26px 0 13px 0;
-  background: #fff;
-  border-bottom: 1px solid #f0f0f0;
+/*   background: #fff;
+  border-bottom: 1px solid #f0f0f0; */
 }
 .topmenu__wrapper {
 }
@@ -1200,7 +1202,18 @@ letter-spacing: -0.01em;
 color: #000;
 margin: 30px 0 18px 0;
 }
-
+#header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+  background: rgba(255, 255, 255, 0.95);
+}
+main {
+  padding-top: 94px;
+}
 @media (max-width: 999px) {
   .btn-cookie {
     font-size: 14px;

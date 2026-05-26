@@ -29,11 +29,29 @@ window.addEventListener("load", () => {
 
     //hideAnotherModal();
     //statsAnimate(".stats", ".stats__number span");
-    //initToggleClick();
+    initToggleClick();
 
     //initLightbox();
-    fixElement(0, 0, "header");
+   // fixElement(0, 0, "header", "fixed");
     wowInit();
+    scrollTo();
+  }
+
+  function scrollTo() {
+    $("a.scrollTo").click(function () {
+    $(this).addClass("active");
+    var destination = $($(this).attr("href")).offset().top - 100;
+    $("html:not(:animated),body:not(:animated)").animate(
+      {
+        scrollTop: destination,
+      },
+      400,
+    );
+    if ($(this).closest('[data-toggle]').length) {
+      $(this).closest('[data-toggle]').removeClass('active')
+    }
+    return false;
+  });
   }
 
   function wowInit() {

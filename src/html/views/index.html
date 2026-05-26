@@ -1,11 +1,14 @@
 <% var data={ title: "MAIN" , author: "" }; %>
   <%= _.template(require('../includes/head.html').default)(data) %>
     <%= _.template(require('../includes/header.html').default)(data) %>
-      <main>
+      <main id="top">
         <section class="heroblock">
           <div class="container__lg">
-            <div class="heroblock__image">
+            <div class="heroblock__image onlyDesktop">
               <img src="img/hero.png" alt="">
+            </div><!-- /.heroblock__image -->
+            <div class="heroblock__image onlyMobile">
+              <img src="img/hero_mobile.png" alt="">
             </div><!-- /.heroblock__image -->
             <div class="heroblock__content">
               <div class="heroblock__title">Official Global Exporter</div>
@@ -15,7 +18,7 @@
             </div><!-- /.heroblock__content -->
           </div><!-- /.container -->
         </section><!-- /.heroblock -->
-        <section class="section about">
+        <section class="section about" id="aboutsection">
           <div class="container">
             <h2>about us</h2>
           </div><!-- /.container -->
@@ -63,7 +66,7 @@
           </div><!-- /.about__wrapper -->
         </section>
 
-        <section class="section categories">
+        <section class="section categories" id="categories">
           <div class="section__header blackwrapper">
             <div class="container">
               <h2>Product Categories</h2>

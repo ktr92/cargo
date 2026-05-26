@@ -61,7 +61,7 @@
 <div class="jsbackdrop "></div>
 
 
-<header id="header" class="header">
+<header id="header" class="header fixed">
   <div class="header__topline">
     <div class="headercontainer" id='headercontainer'>
       <div class="headertop">
@@ -70,7 +70,7 @@
             <div class="headertop__left">
               <div class="headertop__leftitems">
                 <div class="headermain__logo">
-                  <a aria-label="link" href="#" class='logo'>
+                  <a aria-label="link" href="#top" class='logo scrollTo'>
                     <img src="img/logo.svg" alt="логотип" title="логотип" width="104" height="54">
                   </a>
                 </div>
@@ -80,15 +80,26 @@
             <!-- /.headertop__left -->
             <div class="headertop__right">
               <div class="headertop__rightitems">
-                <div class="topmenu">
+                <button class="onlyMobile" data-toggleclick="topmenu">
+                  <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.552484" y1="0.552481" x2="22.2835" y2="0.552481" stroke="black" stroke-width="1.10497"
+                      stroke-linecap="round" />
+                    <line x1="0.552484" y1="5.70901" x2="22.2835" y2="5.70901" stroke="black" stroke-width="1.10497"
+                      stroke-linecap="round" />
+                    <line x1="0.552484" y1="10.8655" x2="22.2835" y2="10.8655" stroke="black" stroke-width="1.10497"
+                      stroke-linecap="round" />
+                  </svg>
+
+                </button>
+                <div class="topmenu" data-toggle="topmenu">
                   <div class="topmenu__wrapper">
                     <div class="topmenu__items">
                       <ul>
-                        <li><a aria-label="link" href="">about Us</a></li>
-                        <li><a aria-label="link" href="">Categories</a></li>
-                        <li><a aria-label="link" href="">results</a></li>
-                        <li><a aria-label="link" href="">Branches</a></li>
-                        <li><a aria-label="link" href="">Contacts</a></li>
+                        <li><a aria-label="link" href="#aboutsection" class="scrollTo">about Us</a></li>
+                        <li><a aria-label="link" href="#categories" class="scrollTo">Categories</a></li>
+                        <li><a aria-label="link" href="#results" class="scrollTo">results</a></li>
+                        <li><a aria-label="link" href="#mapsection" class="scrollTo">Branches</a></li>
+                        <li><a aria-label="link" href="#formsection" class="scrollTo">Contacts</a></li>
                       </ul>
                     </div>
                   </div>
