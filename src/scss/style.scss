@@ -646,14 +646,31 @@ div.blackwrapper h2 {
   color: #fff;
   opacity: 0.7;
 }
-/* .shadow-path1 {
+/* .hover-filter{
   transition: filter 0.3s ease;
+  
 }
 
-svg .shadow-path1:hover  {
-  filter: url(#dropShadow1);
-} */
+svg .hover-filter:hover  {
+  filter: url(#filter2_ddddd_5616_22);
+}
+ */
+.hover-target {
+    pointer-events: bounding-box;
+}
 
+ .filter-layer {
+   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  /* Важно: z-index не работает для SVG-элементов, порядок в разметке важнее! */
+}
+.hover-target:hover {
+  opacity: 0;
+}
+.hover-target:hover ~ .filter-layer {
+  opacity: 1;
+}
 .mapsection h2 {
   line-height: 87%;
 }
