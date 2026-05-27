@@ -343,18 +343,26 @@
     font-size: 29px;
     min-width: unset;
   }
-  .mobile-11 p, .mobile-11 li {
-        font-size: 11px;
-
+  .mobile-11 p,
+  .mobile-11 li {
+    font-size: 11px;
+    line-height: 140%;
+  }
+  .mobile-10 p,
+  .mobile-10 li {
+    font-size: 10px;
+    line-height: 125%;
   }
   .mobile228 p,
   .mobile228 li {
     max-width: 228px;
-  
+  }
+  .mobile237 p,
+  .mobile237 li {
+    max-width: 237px;
   }
   .mobiletextright p,
   .mobiletextright li {
-
     margin-left: auto;
     text-align: right;
   }
@@ -432,13 +440,12 @@
   }
   .partnersection__titleright {
     font-size: 29px;
-letter-spacing: -0.01em;
+    letter-spacing: -0.01em;
   }
   .partnersection__titleright {
     margin-bottom: 9px;
   }
   .mobileright p {
-  
     margin-top: 0;
   }
   .mobileright .partnersection__text {
@@ -447,11 +454,11 @@ letter-spacing: -0.01em;
   }
 
   .blackwrappertext {
-    padding: 20px
+    padding: 20px;
   }
   .partnersection__textcolumns .textabout li {
     font-size: 11px;
-letter-spacing: -0.01em;
+    letter-spacing: -0.01em;
   }
   .salessection__title {
     font-size: 7px;
@@ -468,15 +475,69 @@ letter-spacing: -0.01em;
   }
   .salessection__item {
     max-width: calc(33.3333333333% - 3px);
-}
-.activitiessection__container {
-  padding-top: 13px;
-}
-.activitiessection__text {
-  margin-bottom: 5px;
-}
-.activitiessection__items {
-  gap: 40px;
-  justify-content: center;
-}
+  }
+  .activitiessection__container {
+    padding-top: 13px;
+  }
+  .activitiessection__text {
+    margin-bottom: 5px;
+  }
+  .activitiessection__items {
+    gap: 40px;
+    justify-content: center;
+  }
+  .formsection__text.mobile-11 p {
+    margin: 0;
+    padding-top: 0;
+  }
+  .formsection__text {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+  .formsection__contacttitle {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 90%;
+    text-align: justify;
+    color: #000;
+    margin-bottom: 3px;
+  }
+  .formsection__contactblock {
+    margin-top: 0;
+  }
+  .formsection__wrapper {
+    gap: 12px;
+  }
+  .inputblock input,
+  .inputblock textarea {
+    padding: 8px 9px;
+    font-size: 7px;
+  }
+  .inputblock label {
+    font-size: 7px;
+  }
+  .formsection__text p {
+    margin: 0 !important;
+  }
+  .formsection__contactwrapper {
+    padding: 10px 13px;
+  }
+  .formsection__contact a {
+    font-size: 9px;
+  }
+  .footer__menu li a {
+    font-size: 8px;
+  }
+  .footer__copy {
+    margin-top: 14px;
+    font-size: 8px;
+  }
+  .footer__menu {
+    margin: 20px 0 14px 0;
+  }
+  .btn {
+    font-size: 9px;min-width: 95px;
+    padding: 7px 14px;
+  }
 }
