@@ -1357,6 +1357,27 @@ main {
   gap: 10px;
 }
 
+.blackfulltext {
+  margin: 12px 0;
+  display: block;
+  padding: 19px 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  text-align: justify;
+  background: #000;
+}
+
+.blackfulltext p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.blackfulltext * {
+  color: #fff;
+}
+
 @media (max-width: 999px) {
   .btn-cookie {
     font-size: 14px;
@@ -1471,6 +1492,7 @@ main {
   h2 {
     font-size: 28px;
     margin-bottom: 6px;
+    line-height: 100%;
   }
   .aboutitem__title {
     font-size: 28px;
@@ -1708,15 +1730,15 @@ main {
     font-size: 29px;
     min-width: unset;
   }
-  .partnersection__text p,
-  .partnersection__text li {
+  .mobile-11 p, .mobile-11 li {
     font-size: 11px;
+  }
+  .mobile228 p,
+  .mobile228 li {
     max-width: 228px;
   }
-  .partnersection__text_xl p,
-  .partnersection__text_xl li {
-    font-size: 11px;
-    max-width: 228px;
+  .mobiletextright p,
+  .mobiletextright li {
     margin-left: auto;
     text-align: right;
   }
@@ -1757,6 +1779,81 @@ main {
     line-height: 120%;
     letter-spacing: -0.02em;
     color: #fff;
+  }
+  .blackfulltext p {
+    font-size: 12px;
+    line-height: 140%;
+    max-width: 259px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .partnersection__textlg {
+    font-size: 29px;
+    margin-bottom: 9px;
+  }
+  .partnersection__textlist li {
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: -0.01em;
+  }
+  .partnersection__textimg__img {
+    margin-top: 5px;
+  }
+  .partnersection__textimg__img img {
+    height: 187px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .partnersection__textimg {
+    margin-bottom: 11px;
+  }
+  .partnersection__titleright {
+    font-size: 29px;
+    letter-spacing: -0.01em;
+  }
+  .partnersection__titleright {
+    margin-bottom: 9px;
+  }
+  .mobileright p {
+    margin-top: 0;
+  }
+  .mobileright .partnersection__text {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .blackwrappertext {
+    padding: 20px;
+  }
+  .partnersection__textcolumns .textabout li {
+    font-size: 11px;
+    letter-spacing: -0.01em;
+  }
+  .salessection__title {
+    font-size: 7px;
+    margin-bottom: 18px;
+  }
+  .salessection__value {
+    font-size: 12px;
+  }
+  .salessection__items {
+    gap: 4px;
+  }
+  .salessection__wrapper {
+    padding: 4px 10px;
+  }
+  .salessection__item {
+    max-width: calc(33.3333333333% - 3px);
+  }
+  .activitiessection__container {
+    padding-top: 13px;
+  }
+  .activitiessection__text {
+    margin-bottom: 5px;
+  }
+  .activitiessection__items {
+    gap: 40px;
+    justify-content: center;
   }
 }
 

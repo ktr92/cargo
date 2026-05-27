@@ -1236,6 +1236,25 @@ main {
   flex-direction: column;
   gap: 10px;
 }
+.blackfulltext {
+  margin: 12px 0;
+  display: block;
+  padding: 19px 0;
+  font-weight: 400;
+font-size: 12px;
+line-height: 140%;
+letter-spacing: -0.01em;
+text-align: justify;
+
+background: #000;
+}
+.blackfulltext p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.blackfulltext  * {
+color: #fff;
+}
 @media (max-width: 999px) {
   .btn-cookie {
     font-size: 14px;
