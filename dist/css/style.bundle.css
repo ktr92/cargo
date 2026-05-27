@@ -732,6 +732,15 @@ svg .hover-filter:hover  {
   filter: url(#filter2_ddddd_5616_22);
 }
  */
+.mapsection__map {
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-left: 128px;
+  margin-top: -123px;
+}
+
 .hover-target {
   pointer-events: bounding-box;
 }
@@ -739,20 +748,21 @@ svg .hover-filter:hover  {
 .filter-layer {
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.3s;
-  /* Важно: z-index не работает для SVG-элементов, порядок в разметке важнее! */
+  transition: opacity 0.1s linear;
 }
 
-.hover-target:hover {
+/* .hover-target:hover {
   opacity: 0;
-}
-
-.hover-target:hover ~ .filter-layer {
+} */
+.hover-target:hover + .filter-layer {
   opacity: 1;
 }
 
 .mapsection h2 {
   line-height: 87%;
+  text-align: right;
+  position: relative;
+  max-width: 405px;
 }
 
 .partnersection h2 {
