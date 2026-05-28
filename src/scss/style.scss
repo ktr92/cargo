@@ -665,6 +665,7 @@ svg .hover-filter:hover  {
 
  
  .mapsection__map {
+  position: relative;
 overflow: hidden;
     width: 100%;
     margin: auto;
@@ -1340,7 +1341,56 @@ margin: 0 0 20px 40px;
 .footer__copy a:hover {
   text-decoration: underline;
 }
+.maplegend__item {
+  margin-bottom: 11.75px;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.maplegend {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 237px;
+
+}
+.maplegend__color {
+  width: 19.77px;
+  height: 19.77px;
+}
+.maplegend__text {
+  font-weight: 400;
+font-size: 18px;
+line-height: 88%;
+letter-spacing: -0.01em;
+color: #000;
+}
+.maplegend__color.blue {
+  background: #00A1E8;
+}
+.maplegend__color.red {
+  background: #D7282F;
+}
+.mapsection .container {
+position: relative;
+z-index: 2;
+}
+
 @media (max-width: 999px) {
+  .maplegend__item {
+  gap: 4px;
+  margin-bottom: 5px;
+}
+  .maplegend__text {
+    font-size: 8px;
+  }
+  .maplegend__color {
+    width: 9px;
+    height: 9px;
+  }
+  .maplegend  {
+    left: 54px;
+  }
   .footer__copy {
     flex-wrap: wrap;
 
