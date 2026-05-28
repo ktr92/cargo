@@ -194,16 +194,23 @@ img {
     display: none !important;
   }
 }
-.container__lg {
+.container {
   width: 100%;
-  max-width: 1104px;
+  max-width: 895px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.container {
+.container__lg {
   width: 100%;
-  max-width: 895px;
+  max-width: 1134px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container_xl {
+  width: 100%;
+  max-width: 1010px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -1153,19 +1160,23 @@ h3 {
 }
 
 .formsection__aside {
-  max-width: 286px;
+  max-width: 336px;
 }
 
 .formsection__text {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 120%;
-  text-align: justify;
-  color: #000;
   padding-bottom: 19px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   margin-bottom: 44px;
+}
+
+.formsection__text p {
+  font-family: var(--font-family);
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 120%;
+  text-align: justify;
+  color: #000;
 }
 
 .formsection__contactwrapper {
@@ -1386,6 +1397,43 @@ main {
 
 .blackfulltext * {
   color: #fff;
+}
+
+.pageheader {
+  margin-bottom: 65px;
+  padding: 12px 0;
+  background: #000;
+}
+.pageheader h1 {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 66%;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.pagecontent section {
+  margin-bottom: 75px;
+}
+.pagecontent h2 {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 51px;
+  line-height: 66%;
+  text-transform: uppercase;
+  color: #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pagecontent p, .pagecontent ul {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #000;
+  margin: 0 0 20px 40px;
 }
 
 @media (max-width: 999px) {
@@ -1939,6 +1987,40 @@ main {
   .container {
     max-width: 400px;
     margin: auto;
+  }
+  .pageheader h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .pageheader {
+    margin-bottom: 22px;
+    padding: 6px 0 3pcontainer__lgx 0;
+  }
+  .pagecontent h2 {
+    margin-bottom: 10px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #000;
+  }
+  .pagecontent p, .pagecontent ul {
+    margin-left: 13px;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: -0.01em;
+    color: #000;
+  }
+  .pagecontent section {
+    margin-bottom: 30px;
+  }
+  .container__lg {
+    padding: 0 40px;
   }
 }
 

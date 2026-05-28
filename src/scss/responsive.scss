@@ -549,5 +549,38 @@
     max-width: 400px;
     margin: auto;
   }
- 
+  .pageheader h1 {
+    margin: 0;
+    font-weight: 700;
+font-size: 32px;
+line-height: 100%;
+text-transform: uppercase;
+color: #fff;
+  }
+  .pageheader {
+    margin-bottom: 22px;
+    padding: 6px 0 3pcontainer__lgx 0;
+  }
+  .pagecontent h2 {
+    margin-bottom: 10px;
+    font-family: var(--second-family);
+font-weight: 700;
+font-size: 26px;
+line-height: 100%;
+text-transform: uppercase;
+color: #000;
+  }
+  .pagecontent p, .pagecontent ul {
+    margin-left: 13px;
+    font-weight: 400;
+font-size: 10px;
+letter-spacing: -0.01em;
+color: #000;
+  }
+  .pagecontent section {
+    margin-bottom: 30px;
+  }
+  .container__lg{
+    padding: 0 40px;
+  }
 }
