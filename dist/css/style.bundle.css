@@ -746,6 +746,7 @@ svg .hover-filter:hover  {
   text-align: center;
   padding-left: 128px;
   margin-top: -123px;
+  height: 676px;
 }
 
 .hover-target {
@@ -2021,6 +2022,9 @@ main {
   }
   .container__lg {
     padding: 0 40px;
+  }
+  .mapsection__map {
+    height: unset;
   }
 }
 
