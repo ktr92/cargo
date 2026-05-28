@@ -181,7 +181,7 @@ img {
   height: initial;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 855px) {
   .onlyMobile {
     display: none !important;
   }
@@ -1437,7 +1437,32 @@ main {
   margin: 0 0 20px 40px;
 }
 
+.footer__menu li a {
+  transition: all 0.3s ease;
+}
+
+.footer__menu li a:hover {
+  text-decoration: underline;
+}
+
+.formsection__contact a:hover {
+  text-decoration: underline;
+}
+
+.footer__copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer__copy a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 999px) {
+  .footer__copy {
+    flex-wrap: wrap;
+  }
   .btn-cookie {
     font-size: 14px;
     padding: 10px;
@@ -1468,7 +1493,7 @@ main {
 }
 /* tablet */
 /* mobile */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 855px) {
   .topmenu {
     position: absolute;
     right: 0;

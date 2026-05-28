@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
     //lazyLoadSrc("iframe");
 
     //hideAnotherModal();
-    //statsAnimate(".stats", ".stats__number span");
+    statsAnimate(".stats", ".stats__title span");
     initToggleClick();
 
     //initLightbox();
